@@ -1,10 +1,11 @@
 <?php
 
+//klass Todo
 class Todo {
     // Properties
     private $tasks = array();
 
-    // Method to add a task
+    // Metod för att lägga till en task till array
     public function addTask($task) {
         if (!empty($task)) {
             $this->tasks[] = $task;
@@ -13,12 +14,13 @@ class Todo {
         return false;
     }
 
-    // Method to get tasks
+    // getter metod
     public function getTasks() {
         return $this->tasks;
     }
 
-    // Method to delete a task
+
+    // Metod för att ta bort en task
     public function deleteTask($index) {
         if (isset($this->tasks[$index])) {
             unset($this->tasks[$index]);
